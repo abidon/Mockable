@@ -155,6 +155,7 @@ extension MemberFactory {
             firstName: NS.with,
             secondName: NS.assertion,
             type: AttributedTypeSyntax(
+                specifiers: [],
                 attributes: [.attribute(.escaping)],
                 baseType: IdentifierTypeSyntax(name: NS.MockableAssertion)
             )
