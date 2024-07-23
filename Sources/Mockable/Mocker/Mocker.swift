@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Combine
+import OpenCombineShim
 
 /// A class responsible for mocking and verifying interactions with a mockable service.
 ///

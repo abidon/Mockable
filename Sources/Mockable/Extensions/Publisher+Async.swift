@@ -5,7 +5,7 @@
 //  Created by Kolos Foltanyi on 2024. 04. 07..
 //
 
-import Combine
+import OpenCombineShim
 
 extension Publisher where Failure == Never {
     var stream: AsyncStream<Output> {

@@ -50,11 +50,15 @@ let package = Package(
     ],
     dependencies: ifDev(add: devDependencies) + [
         .package(url: "https://github.com/apple/swift-syntax.git", from: "600.0.0-latest"),
+        .package(url: "https://github.com/OpenCombine/OpenCombine.git", .upToNextMajor(from: "0.14.0")),
     ],
     targets: ifDev(add: devTargets) + [
         .target(
             name: "Mockable",
-            dependencies: ["MockableMacro"],
+            dependencies: [
+                "MockableMacro",
+                .product(name: "OpenCombineShim", package: "OpenCombine"),
+            ],
             plugins: ifDev(add: devPlugins)
         ),
         .target(
