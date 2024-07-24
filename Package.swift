@@ -50,7 +50,7 @@ let package = Package(
     ],
     dependencies: ifDev(add: devDependencies) + [
         .package(url: "https://github.com/apple/swift-syntax.git", from: "600.0.0-latest"),
-        .package(url: "https://github.com/OpenCombine/OpenCombine.git", .upToNextMajor(from: "0.14.0")),
+        .package(url: "https://github.com/abidon/OpenCombine.git", branch: "feature/combine-latest"),
     ],
     targets: ifDev(add: devTargets) + [
         .target(
